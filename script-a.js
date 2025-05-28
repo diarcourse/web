@@ -87,7 +87,7 @@ $(document).ready(function () {
         dataGlobal = data;
         // Modal login logic
         if (getCookie('user_auth')) {
-            window.location.href = './dashboard';
+            window.location.href = './download';
             return;
         }
         $('#form-container').addClass('hidden');
@@ -102,7 +102,7 @@ $(document).ready(function () {
             );
             if (found) {
                 setCookie('user_auth', email + '|' + wa, 600);
-                window.location.href = './dashboard';
+                window.location.href = './download';
             } else {
                 alert('Tidak ada data yang cocok silahkan melakukan pengisian form dahulu');
                 $('#login-modal').addClass('hidden');
